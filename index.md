@@ -4,46 +4,45 @@ title: xiaohei-info
 ---
 
 <style>
-.home-wrap {
-  margin: 0 auto;
-}
+.home-wrap { margin: 0 auto; }
 .hero {
-  padding: 1.5rem 0 0.75rem;
+  padding: 1.5rem 0 1rem;
 }
-.hero-badge {
+.eyebrow {
   display: inline-block;
-  margin-bottom: 0.85rem;
-  padding: 0.32rem 0.7rem;
+  margin-bottom: 0.9rem;
+  padding: 0.34rem 0.72rem;
   border-radius: 999px;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   background: #eef2ff;
   color: #3730a3;
 }
 .hero h1 {
-  margin: 0 0 0.85rem;
-  font-size: 2.2rem;
-  line-height: 1.2;
+  margin: 0 0 0.8rem;
+  font-size: 2.35rem;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
 }
 .hero p {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.8;
-  color: #4b5563;
   max-width: 760px;
+  font-size: 1.04rem;
+  line-height: 1.85;
+  color: #4b5563;
 }
 .hero-actions {
-  margin-top: 1.2rem;
+  margin-top: 1.25rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
 }
 .hero-actions a {
   display: inline-block;
-  padding: 0.72rem 1rem;
+  padding: 0.74rem 1rem;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 .hero-actions a.primary {
   background: #111827;
@@ -54,88 +53,112 @@ title: xiaohei-info
   color: #111827;
 }
 .section {
-  margin-top: 2rem;
+  margin-top: 2.3rem;
 }
 .section h2 {
-  margin-bottom: 0.9rem;
-  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.28rem;
 }
-.doc-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid #e5e7eb;
-  border-radius: 18px;
-  padding: 1.2rem 1.25rem;
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-}
-.doc-card:hover {
-  text-decoration: none;
-}
-.doc-card-title {
-  margin: 0 0 0.45rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #111827;
-}
-.doc-card-desc {
-  margin: 0;
-  line-height: 1.75;
+.section-intro {
+  margin: 0 0 1rem;
   color: #4b5563;
-}
-.doc-meta {
-  margin-top: 0.9rem;
-  font-size: 0.92rem;
-  color: #6b7280;
+  line-height: 1.8;
 }
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-.note {
+.panel,
+.post-card {
   border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 1rem;
-  background: #fff;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
 }
-.note h3 {
+.panel {
+  padding: 1rem 1.05rem;
+}
+.panel h3 {
   margin: 0 0 0.45rem;
   font-size: 1rem;
 }
-.note p {
+.panel p {
   margin: 0;
   color: #4b5563;
-  line-height: 1.7;
+  line-height: 1.75;
 }
-@media (max-width: 780px) {
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.post-card {
+  display: block;
+  padding: 1.2rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+.post-card:hover { text-decoration: none; }
+.post-meta {
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+.post-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.24rem;
+  line-height: 1.35;
+  color: #111827;
+  font-weight: 700;
+}
+.post-desc {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.8;
+}
+.post-tags {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.post-tags span {
+  display: inline-block;
+  padding: 0.26rem 0.55rem;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.82rem;
+}
+.mini-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #4b5563;
+  line-height: 1.9;
+}
+@media (max-width: 820px) {
+  .hero h1 { font-size: 1.85rem; }
+  .grid { grid-template-columns: 1fr; }
 }
 @media (prefers-color-scheme: dark) {
-  .hero-badge {
+  .eyebrow {
     background: rgba(99, 102, 241, 0.18);
     color: #c7d2fe;
   }
   .hero p,
-  .doc-card-desc,
-  .note p,
-  .doc-meta {
+  .section-intro,
+  .panel p,
+  .post-meta,
+  .post-desc,
+  .mini-list {
     color: #d1d5db;
   }
-  .doc-card,
-  .note {
+  .panel,
+  .post-card {
     background: #111827;
     border-color: #374151;
     box-shadow: none;
   }
-  .doc-card-title,
-  .note h3 {
+  .panel h3,
+  .post-title,
+  .section h2,
+  .hero h1 {
     color: #f9fafb;
   }
   .hero-actions a.primary {
@@ -146,48 +169,70 @@ title: xiaohei-info
     background: #1f2937;
     color: #f9fafb;
   }
+  .post-tags span {
+    background: #1f2937;
+    color: #e5e7eb;
+  }
 }
 </style>
 
 <div class="home-wrap">
   <section class="hero">
-    <div class="hero-badge">Published Design Document</div>
-    <h1>xiaohei-info 文档页</h1>
+    <div class="eyebrow">Public Notes</div>
+    <h1>xiaohei-info</h1>
     <p>
-      这里放的是已经整理完成、适合公开阅读的设计文档。当前首页收录的是一篇关于 Hermes 原生 Kanban 软件开发协作流程的完整设计方案，重点讨论角色边界、运行架构、任务流转和验收契约。
+      一个面向公开读者的 AI Agent 协作与工程方法笔记站。这里主要发布和多角色协作、工作流设计、交付机制、运行边界相关的长文档与设计笔记，重点不是工具宣传，而是把方案如何设计、如何落地、为什么这样取舍讲清楚。
     </p>
     <div class="hero-actions">
-      <a class="primary" href="/hermes-kanban-software-development-collaboration-design/">阅读设计文档</a>
-      <a class="secondary" href="#featured-docs">查看文档简介</a>
+      <a class="primary" href="/hermes-kanban-software-development-collaboration-design/">阅读最新文章</a>
+      <a class="secondary" href="#about-site">了解这个站点</a>
     </div>
-  </section>
-
-  <section class="section" id="featured-docs">
-    <h2>当前发布</h2>
-    <a class="doc-card" href="/hermes-kanban-software-development-collaboration-design/">
-      <div class="doc-card-title">Hermes Kanban 软件开发协作流程设计方案</div>
-      <p class="doc-card-desc">
-        一份面向真实运行的协作设计文档。内容覆盖入口层与执行层解耦、orchestrator 的职责边界、PM / Architect / Reviewer / QA 的角色定义，以及如何让 Hermes Kanban 成为唯一 runtime contract。
-      </p>
-      <div class="doc-meta">适合阅读对象：软件开发协作流程设计、AI Agent 编排、Hermes Kanban 使用者</div>
-    </a>
   </section>
 
   <section class="section">
-    <h2>这篇文档重点讲什么</h2>
+    <h2>最新发布</h2>
+    <p class="section-intro">
+      当前站点收录的是一篇关于 Hermes 原生 Kanban 软件开发协作流程的设计文档，重点讨论角色边界、任务流转、验收契约，以及一套多角色协作方案是如何逐步收敛出来的。
+    </p>
+    <a class="post-card" href="/hermes-kanban-software-development-collaboration-design/">
+      <div class="post-meta">设计文档 · 2026-05</div>
+      <div class="post-title">Hermes Kanban 软件开发协作流程设计方案</div>
+      <p class="post-desc">
+        一篇围绕软件开发协作设计的长文，内容覆盖入口层与执行层解耦、orchestrator 的边界、PM / Architect / Reviewer / QA 的职责定义，以及如何让协作流程真正落到原生 Kanban contract 上。
+      </p>
+      <div class="post-tags">
+        <span>AI Agent</span>
+        <span>Workflow Design</span>
+        <span>Kanban</span>
+        <span>Software Delivery</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="section" id="about-site">
+    <h2>这个站点会写什么</h2>
     <div class="grid">
-      <div class="note">
-        <h3>角色怎么分</h3>
-        <p>把 default / trading、orchestrator、PM、Architect、工程实现、Reviewer、QA 的职责边界拆清楚，避免重新塌回单点超人模式。</p>
+      <div class="panel">
+        <h3>协作方案设计</h3>
+        <p>关注多角色 AI 协作如何拆层、怎么定义边界、怎样避免流程重新塌回单点执行。</p>
       </div>
-      <div class="note">
-        <h3>流程怎么跑</h3>
-        <p>说明根任务如何进入看板、任务图如何拆解、不同复杂度的任务该走长链路还是短链路，以及 handoff 要留下哪些信息。</p>
+      <div class="panel">
+        <h3>落地过程与取舍</h3>
+        <p>不只展示结论，也解释为什么最终收敛成这版方案，哪些设计是为了提升可交付性和可维护性。</p>
       </div>
-      <div class="note">
-        <h3>运行怎么收敛</h3>
-        <p>解释为什么只保留一个主 dispatcher host、为什么 Dashboard 只是观察和干预面板，以及为什么不再额外造一层平行状态机。</p>
+      <div class="panel">
+        <h3>工程化运行视角</h3>
+        <p>关注 workflow、验收契约、交接结构、运行边界这些更接近真实交付的问题，而不是只停留在概念层。</p>
       </div>
     </div>
+  </section>
+
+  <section class="section">
+    <h2>适合谁看</h2>
+    <ul class="mini-list">
+      <li>在搭建 AI Agent 工作流或多角色协作链路的人</li>
+      <li>关心软件开发流程如何和 AI 编排真正结合的人</li>
+      <li>希望把“能跑起来”推进到“可交付、可维护、可复用”的团队或个人</li>
+    </ul>
   </section>
 </div>
