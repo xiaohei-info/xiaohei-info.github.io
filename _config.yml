@@ -1,4 +1,5 @@
 title: xiaohei-info
-description: Published notes and design documents
+description: Published design documents and implementation notes
+lang: zh-CN
 markdown: kramdown
 theme: minima
