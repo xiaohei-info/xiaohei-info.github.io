@@ -3,3 +3,7 @@ description: Public notes on AI agent collaboration, workflow design, and engine
 lang: zh-CN
 markdown: kramdown
 theme: minima
+author: xiaohei-info
+github_username: xiaohei-info
+header_pages:
+  - hermes-kanban-software-development-collaboration-design.md

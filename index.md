@@ -1,12 +1,12 @@
 ---
 layout: default
-title: xiaohei-info
+title: Home
 ---
 
 <style>
 .home-wrap { margin: 0 auto; }
 .hero {
-  padding: 1.5rem 0 1rem;
+  padding: 1.65rem 0 1rem;
 }
 .eyebrow {
   display: inline-block;
@@ -20,8 +20,8 @@ title: xiaohei-info
 }
 .hero h1 {
   margin: 0 0 0.8rem;
-  font-size: 2.35rem;
-  line-height: 1.18;
+  font-size: 2.4rem;
+  line-height: 1.16;
   letter-spacing: -0.02em;
 }
 .hero p {
@@ -52,8 +52,22 @@ title: xiaohei-info
   background: #f3f4f6;
   color: #111827;
 }
+.meta-strip {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.meta-strip span {
+  display: inline-block;
+  padding: 0.3rem 0.62rem;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.84rem;
+}
 .section {
-  margin-top: 2.3rem;
+  margin-top: 2.35rem;
 }
 .section h2 {
   margin-bottom: 0.8rem;
@@ -132,8 +146,14 @@ title: xiaohei-info
   color: #4b5563;
   line-height: 1.9;
 }
+.small-note {
+  margin-top: 0.85rem;
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.75;
+}
 @media (max-width: 820px) {
-  .hero h1 { font-size: 1.85rem; }
+  .hero h1 { font-size: 1.9rem; }
   .grid { grid-template-columns: 1fr; }
 }
 @media (prefers-color-scheme: dark) {
@@ -146,7 +166,8 @@ title: xiaohei-info
   .panel p,
   .post-meta,
   .post-desc,
-  .mini-list {
+  .mini-list,
+  .small-note {
     color: #d1d5db;
   }
   .panel,
@@ -169,7 +190,8 @@ title: xiaohei-info
     background: #1f2937;
     color: #f9fafb;
   }
-  .post-tags span {
+  .post-tags span,
+  .meta-strip span {
     background: #1f2937;
     color: #e5e7eb;
   }
@@ -181,21 +203,26 @@ title: xiaohei-info
     <div class="eyebrow">Public Notes</div>
     <h1>xiaohei-info</h1>
     <p>
-      一个面向公开读者的 AI Agent 协作与工程方法笔记站。这里主要发布和多角色协作、工作流设计、交付机制、运行边界相关的长文档与设计笔记，重点不是工具宣传，而是把方案如何设计、如何落地、为什么这样取舍讲清楚。
+      一个面向公开读者的 AI Agent 协作与工程方法笔记站。这里主要记录多角色协作、工作流设计、交付机制和运行边界相关的设计文章，重点不是工具宣传，而是把方案如何设计、如何落地、为什么这样取舍讲清楚。
     </p>
     <div class="hero-actions">
       <a class="primary" href="/hermes-kanban-software-development-collaboration-design/">阅读最新文章</a>
       <a class="secondary" href="#about-site">了解这个站点</a>
+    </div>
+    <div class="meta-strip">
+      <span>中文写作</span>
+      <span>公开笔记</span>
+      <span>持续更新</span>
     </div>
   </section>
 
   <section class="section">
     <h2>最新发布</h2>
     <p class="section-intro">
-      当前站点收录的是一篇关于 Hermes 原生 Kanban 软件开发协作流程的设计文档，重点讨论角色边界、任务流转、验收契约，以及一套多角色协作方案是如何逐步收敛出来的。
+      当前公开的是一篇关于 Hermes 原生 Kanban 软件开发协作流程的设计文章，重点讨论角色边界、任务流转、验收契约，以及一套多角色协作方案是如何逐步收敛出来的。
     </p>
     <a class="post-card" href="/hermes-kanban-software-development-collaboration-design/">
-      <div class="post-meta">设计文档 · 2026-05</div>
+      <div class="post-meta">设计文章 · 更新于 2026-05</div>
       <div class="post-title">Hermes Kanban 软件开发协作流程设计方案</div>
       <p class="post-desc">
         一篇围绕软件开发协作设计的长文，内容覆盖入口层与执行层解耦、orchestrator 的边界、PM / Architect / Reviewer / QA 的职责定义，以及如何让协作流程真正落到原生 Kanban contract 上。
@@ -207,6 +234,7 @@ title: xiaohei-info
         <span>Software Delivery</span>
       </div>
     </a>
+    <div class="small-note">目前站点以公开设计文章为主，后续会继续补充与 AI Agent 协作和工程化交付相关的内容。</div>
   </section>
 
   <section class="section" id="about-site">
